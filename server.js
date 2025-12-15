@@ -23,8 +23,9 @@ const contactRoutes = require('./routes/contactRoutes');
 
 
 const app = express();
-// بورت السيرفر
-const PORT = process.env.SERVER_URL || 5000; // إذا لم يكن موجود في .env يستخدم 5000 كافتراضي
+
+// استخدم PORT من Render أو من .env كاحتياطي
+const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
